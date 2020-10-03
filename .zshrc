@@ -134,6 +134,8 @@ alias nethogs='sudo nethogs'
 alias iptraf='sudo iptraf'
 alias iotop='sudo iotop'
 alias powertop='sudo powertop'
+
+alias -s pdf=xdg-open
 #######
 
 ####### dir colors
