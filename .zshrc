@@ -83,6 +83,10 @@ plugins=(git
     ssh-agent
 )
 
+#### alias to disable autocorrect
+alias docker='nocorrect docker'
+####
+
 #### tmux plugin
 ZSH_TMUX_AUTOSTART="true"
 ZSH_TMUX_AUTOSTART_ONCE="false"
