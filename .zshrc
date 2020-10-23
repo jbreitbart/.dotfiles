@@ -122,7 +122,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
 ####### ALIAS
 alias ll='ls -lh'
 alias la='ls -ah'
-alias l='ls -CF'
 alias df='df -h'
 alias du='du -h'
 alias ..='cd ..'
