@@ -1,0 +1,16 @@
+---
+shared:
+  port: "6924"
+  secret: cPnh(Kj%Sh(5pbvY&IUf
+  pueue_directory: /home/jbreitbart/.local/share/pueue
+  use_unix_socket: false
+  unix_socket_path: /home/jbreitbart/.local/share/pueue/pueue_jbreitbart.socket
+client:
+  read_local_logs: true
+  show_confirmation_questions: false
+  max_status_lines: ~
+daemon:
+  default_parallel_tasks: 1
+  pause_on_failure: false
+  callback: "~/.config/pueue/notify.sh {{start}} {{end}} '{{ command }}'"
+  groups: {}

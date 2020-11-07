@@ -105,6 +105,10 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias cat=bat
 #######
 
+###### pueue
+alias p=pueue
+######
+
 ###### exa
 alias ls=exa
 ######
@@ -113,6 +117,11 @@ alias ls=exa
 source $HOME/.cargo/env
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+#######
+
+####### cuda
+export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/lib/cuda/bin:$PATH
 #######
 
 ####### PATH / LD_LIBRARY_PATH
