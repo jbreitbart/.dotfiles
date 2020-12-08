@@ -119,9 +119,14 @@ export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 #######
 
-####### cuda
+####### Cuda
 export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/lib/cuda/bin:$PATH
+#######
+
+####### Ruby
+export GEM_HOME=$HOME/.ruby
+export PATH=$PATH:$HOME/.ruby/bin
 #######
 
 ####### PATH / LD_LIBRARY_PATH
