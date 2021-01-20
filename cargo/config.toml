@@ -1,0 +1,9 @@
+[alias]
+b = "build"
+c = "check"
+t = "test"
+r = "run"
+rr = "run --release"
+
+[profile.dev]
+incremental = false # disabled as sccache does not work with incremental builds
