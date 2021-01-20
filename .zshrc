@@ -83,27 +83,27 @@ plugins=(git
     ssh-agent
 )
 
-#### alias to disable autocorrect
+###### alias to disable autocorrect
 alias docker='nocorrect docker'
-####
+######
 
-#### tmux plugin
+###### tmux plugin
 ZSH_TMUX_AUTOSTART="true"
 ZSH_TMUX_AUTOSTART_ONCE="false"
 ZSH_TMUX_AUTOCONNECT="false"
-####
+######
 
-#### ssh-agent plugin
+###### ssh-agent plugin
 zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519
-####
+######
 
 source $ZSH/oh-my-zsh.sh
 
-####### bat
+###### bat
 export BAT_THEME="Nord"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias cat=bat
-#######
+######
 
 ###### pueue
 alias p=pueue
@@ -111,12 +111,17 @@ alias p=pueue
 
 ###### exa
 alias ls=exa
-######
+#######
+
+####### sccache
+export SCCACHE_CACHE_SIZE="5G"
+#######
 
 ####### Rust
 source $HOME/.cargo/env
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export RUSTC_WRAPPER=sccache
 #######
 
 ####### Cuda
@@ -151,6 +156,7 @@ alias nethogs='sudo nethogs'
 alias iptraf='sudo iptraf'
 alias iotop='sudo iotop'
 alias powertop='sudo powertop'
+alias dmesg='sudo dmesg'
 
 alias -s pdf=xdg-open
 #######
