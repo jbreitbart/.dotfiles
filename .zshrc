@@ -85,6 +85,7 @@ plugins=(git
 
 ###### alias to disable autocorrect
 alias docker='nocorrect docker'
+alias cargo='nocorrect cargo'
 ######
 
 ###### tmux plugin
