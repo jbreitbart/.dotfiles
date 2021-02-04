@@ -150,6 +150,7 @@ alias df='df -h'
 alias du='du -h'
 alias ..='cd ..'
 alias ssh='ssh -X'
+alias tickr='tickrs -p -t 1M -s TSLA,AMD,AMZN,ASML,TEVA,NEL.OL,WORK,BIDU,7CD.F,TLRY,GME,BB'
 
 alias halt='sudo halt'
 alias reboot='sudo reboot'
