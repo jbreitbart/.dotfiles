@@ -135,6 +135,11 @@ export GEM_HOME=$HOME/.ruby
 export PATH=$PATH:$HOME/.ruby/bin
 #######
 
+####### BOSCH
+alias vpn="tmux new-session -d -s vpn 'osd-vpn-connect -x <~/.vpn_login'"
+alias proxyrr="systemctl stop --user proxy && systemctl start --user proxy"
+#######
+
 ####### PATH / LD_LIBRARY_PATH
 #source /opt/intel/bin/compilervars.sh intel64
 PATH=$HOME/bin/parsync:$HOME/bin/bear/bin:$PATH
