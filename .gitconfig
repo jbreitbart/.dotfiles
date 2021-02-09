@@ -1,18 +1,20 @@
 [user]
 	name = Jens Breitbart
-	email = jbreitbart@gmail.com
-
-[github]
-	user = jbreitbart
-[include]
-	path = ~/.gitconfig_private
+	email = jens.breitbart@de.bosch.com
 
 [core]
 	autocrlf = input
 	pager = delta
+	editor = vim
 
 [credential]
 	helper = cache --timeout=3600
+
+[http]
+	proxy = http://localhost:3128
+
+[pull]
+	rebase = true
 
 [push]
 	default = simple
@@ -38,3 +40,10 @@
 
 [interactive]
 	diffFilter = delta --color-only
+
+[github]
+	user = jbreitbart
+[credential "https://github.com"]
+       username = jbreitbart
+[include]
+	path = ~/.gitconfig_private
