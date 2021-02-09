@@ -115,7 +115,10 @@ alias ls=exa
 #######
 
 ####### sccache
-export SCCACHE_CACHE_SIZE="5G"
+export SCCACHE_CACHE_SIZE="15G"
+
+export CMAKE_CXX_COMPILER_LAUNCHER=sccache
+export CMAKE_C_COMPILER_LAUNCHER=sccache
 #######
 
 ####### Rust
@@ -126,8 +129,8 @@ export RUSTC_WRAPPER=sccache
 #######
 
 ####### Cuda
-export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
-export PATH=/usr/lib/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda/bin:$PATH
 #######
 
 ####### Ruby
@@ -138,6 +141,14 @@ export PATH=$PATH:$HOME/.ruby/bin
 ####### BOSCH
 alias vpn="tmux new-session -d -s vpn 'osd-vpn-connect -x <~/.vpn_login'"
 alias proxyrr="systemctl stop --user proxy && systemctl start --user proxy"
+source /opt/ros/melodic/setup.zsh
+
+export PATH=/opt/python/python3.6.10/bin:$PATH
+export PYTHONPATH=/opt/python/python3.6.10/bin:$PYTHONPATH
+
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+alias srm='nocorrect srm'
 #######
 
 ####### PATH / LD_LIBRARY_PATH
