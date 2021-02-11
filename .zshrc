@@ -114,6 +114,13 @@ alias p=pueue
 alias ls=exa
 #######
 
+####### valgrind
+export VALGRIND_LIB=/home/rbj2abt/bin/valgrind/lib/valgrind
+export PATH=/home/rbj2abt/bin/valgrind/bin:$PATH
+
+alias valgrind='nocorrect valgrind'
+#######
+
 ####### sccache
 export SCCACHE_CACHE_SIZE="15G"
 
@@ -138,11 +145,17 @@ export GEM_HOME=$HOME/.ruby
 export PATH=$PATH:$HOME/.ruby/bin
 #######
 
-####### BOSCH
+####### BOSCH Network
 alias vpn="tmux new-session -d -s vpn 'osd-vpn-connect -x <~/.vpn_login'"
 alias proxyrr="systemctl stop --user proxy && systemctl start --user proxy"
-source /opt/ros/melodic/setup.zsh
+alias piproxy="tmux new-session -d -s piproxy 'ssh -CnND 8080 pi@192.168.188.10'"
+#######
 
+####### ROS
+source /opt/ros/melodic/setup.zsh
+#######
+
+####### CR Stack
 export PATH=/opt/python/python3.6.10/bin:$PATH
 export PYTHONPATH=/opt/python/python3.6.10/bin:$PYTHONPATH
 
