@@ -135,11 +135,15 @@ export GEM_HOME=$HOME/.ruby
 export PATH=$PATH:$HOME/.ruby/bin
 #######
 
+####### VSCode
+PATH=/usr/share/code/bin/code:$PATH
+#######
+
 ####### PATH / LD_LIBRARY_PATH
 #source /opt/intel/bin/compilervars.sh intel64
-PATH=$HOME/bin/parsync:$HOME/bin/bear/bin:$PATH
-PATH=$HOME/bin:$HOME/bin/beets:$HOME/bin/cquery/bin:$HOME/bin/llvm/bin:$HOME/bin/cmake/bin:$PATH
-LD_LIBRARY_PATH=$HOME/bin/llvm/lib:$HOME/bin/boost_1_55_gcc/lib/:$LD_LIBRARY_PATH
+PATH=$HOME/bin/bear/bin:$PATH
+PATH=$HOME/bin:$HOME/bin/beets:$HOME/bin/llvm/bin:$PATH
+LD_LIBRARY_PATH=$HOME/bin/llvm/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
 #######
 
