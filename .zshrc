@@ -47,7 +47,7 @@ ZSH_THEME="nord_tywr"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -149,6 +149,7 @@ export PATH=$PATH:$HOME/.ruby/bin
 alias vpn="tmux new-session -d -s vpn 'osd-vpn-connect -x <~/.vpn_login'"
 alias proxyrr="systemctl stop --user proxy && systemctl start --user proxy"
 alias piproxy="tmux new-session -d -s piproxy 'ssh -CnND 8080 pi@192.168.188.10'"
+#alias mount_u="gio mount 'smb://10.3.222.101/RBJ2ABT$/'"
 #######
 
 ####### ROS
@@ -196,6 +197,8 @@ alias -s pdf=xdg-open
 # https://www.nordtheme.com/docs/ports/dircolors/installation
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 ######
+
+eval "$(starship init zsh)"
 
 # User configuration
 
