@@ -1,1 +1,3 @@
-../.config/starship.toml
+[character]
+success_symbol = "[ᨂ](bold cyan)"
+error_symbol = "[ᨂ](bold red)"

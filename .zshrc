@@ -193,12 +193,14 @@ alias dmesg='sudo dmesg'
 alias -s pdf=xdg-open
 #######
 
-####### dir colors
-# https://www.nordtheme.com/docs/ports/dircolors/installation
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+###### starship prompt
+eval "$(starship init zsh)"
 ######
 
-eval "$(starship init zsh)"
+###### direnv
+eval "$(direnv hook zsh)"
+######
+
 
 # User configuration
 
