@@ -129,7 +129,7 @@ export CMAKE_C_COMPILER_LAUNCHER=sccache
 #######
 
 ####### CMake
-export CMAKE_EXPORT_COMPILE_COMMANDS=true
+export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
 #######
 
 ####### Rust
