@@ -8,7 +8,7 @@
 	editor = vim
 
 [credential]
-	helper = cache --timeout=3600
+	helper = store
 
 [http]
 	proxy = http://localhost:3128
@@ -40,10 +40,3 @@
 
 [interactive]
 	diffFilter = delta --color-only
-
-[github]
-	user = jbreitbart
-[credential "https://github.com"]
-       username = jbreitbart
-[include]
-	path = ~/.gitconfig_private
