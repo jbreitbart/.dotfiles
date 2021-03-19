@@ -128,6 +128,10 @@ export CMAKE_CXX_COMPILER_LAUNCHER=sccache
 export CMAKE_C_COMPILER_LAUNCHER=sccache
 #######
 
+####### CMake
+export CMAKE_EXPORT_COMPILE_COMMANDS=true
+#######
+
 ####### Rust
 source $HOME/.cargo/env
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
@@ -159,10 +163,17 @@ source /opt/ros/melodic/setup.zsh
 ####### CR Stack
 export PATH=/opt/python/python3.6.10/bin:$PATH
 export PYTHONPATH=/opt/python/python3.6.10/bin:$PYTHONPATH
-
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+export MOD_ADKIT_ROOT=/home/rbj2abt/mod_adkit_ws
 
 alias srm='nocorrect srm'
+
+##### car-boss
+export CARBOSS_ROOT=/home/rbj2abt/temp/car-boss
+export CARLA_ROOT=$CARBOSS_ROOT/external/carla
+export CARLA_ROS_BRIDGE=$CARBOSS_ROOT/external/carla_ros_bridge
+#####
+
 #######
 
 ####### PATH / LD_LIBRARY_PATH
