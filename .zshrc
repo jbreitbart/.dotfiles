@@ -136,7 +136,7 @@ export PATH=$PATH:$HOME/.ruby/bin
 #######
 
 ####### VSCode
-PATH=/usr/share/code/bin/code:$PATH
+PATH=/usr/share/code/bin/:$PATH
 #######
 
 ####### PATH / LD_LIBRARY_PATH
