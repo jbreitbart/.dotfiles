@@ -1,0 +1,16 @@
+[character]
+success_symbol = "[ᨂ](bold cyan)"
+error_symbol = "[ᨂ](bold red)"
+
+[status]
+map_symbol = true
+disabled = false
+style = "red"
+format = '[$symbol]($style) '
+#format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+
+[memory_usage]
+disabled = false
+
+[gcloud]
+disabled = true
