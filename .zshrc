@@ -2,9 +2,6 @@
 # It contains GOPATH, some functions, aliases etc...
 [ -r ~/.zsh_private ] && source ~/.zsh_private
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -28,26 +25,14 @@ ZSH_THEME="nord_tywr"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -64,9 +49,6 @@ ENABLE_CORRECTION="true"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -98,7 +80,9 @@ ZSH_TMUX_AUTOCONNECT="false"
 zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519
 ######
 
+###### OMZ
 source $ZSH/oh-my-zsh.sh
+######
 
 ###### bat
 export BAT_THEME="Nord"
@@ -167,9 +151,12 @@ alias dmesg='sudo dmesg'
 alias -s pdf=xdg-open
 #######
 
-####### dir colors
-# https://www.nordtheme.com/docs/ports/dircolors/installation
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+###### starship prompt
+eval "$(starship init zsh)"
+######
+
+###### direnv
+eval "$(direnv hook zsh)"
 ######
 
 # User configuration
