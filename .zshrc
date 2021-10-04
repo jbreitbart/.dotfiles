@@ -130,6 +130,7 @@ export CMAKE_C_COMPILER_LAUNCHER=sccache
 
 ####### CMake
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
+PATH=$HOME/bin/cmake/bin:$PATH
 #######
 
 ####### Rust
@@ -137,6 +138,11 @@ source $HOME/.cargo/env
 export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export RUSTC_WRAPPER=sccache
+#######
+
+####### Go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=/home/rbj2abt/go
 #######
 
 ####### Cuda
@@ -152,34 +158,23 @@ export PATH=$PATH:$HOME/.ruby/bin
 ####### BOSCH Network
 alias vpn="tmux new-session -d -s vpn 'osd-vpn-connect -x <~/.vpn_login'"
 alias proxyrr="systemctl stop --user proxy && systemctl start --user proxy"
-alias piproxy="tmux new-session -d -s piproxy 'ssh -CnND 8080 pi@192.168.188.10'"
+alias piproxy="tmux new-session -d -s piproxy 'ssh -CnND 8080 pi@192.168.188.11'"
 #alias mount_u="gio mount 'smb://10.3.222.101/RBJ2ABT$/'"
+#######
+
+####### Pace
+export REQUESTS_CA_BUNDLE=/home/rbj2abt/.config/certs/Bosch-Azure.pem
+alias pacesh="docker exec -it pace-devcontainer-rbj2abt /usr/bin/zsh"
 #######
 
 ####### ROS
 source /opt/ros/melodic/setup.zsh
 #######
 
-####### CR Stack
-export PATH=/opt/python/python3.6.10/bin:$PATH
-export PYTHONPATH=/opt/python/python3.6.10/bin:$PYTHONPATH
-export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-export MOD_ADKIT_ROOT=/home/rbj2abt/mod_adkit_ws
-
-alias srm='nocorrect srm'
-
-##### car-boss
-export CARBOSS_ROOT=/home/rbj2abt/temp/car-boss
-export CARLA_ROOT=$CARBOSS_ROOT/external/carla
-export CARLA_ROS_BRIDGE=$CARBOSS_ROOT/external/carla_ros_bridge
-#####
-
-#######
-
 ####### PATH / LD_LIBRARY_PATH
 #source /opt/intel/bin/compilervars.sh intel64
 PATH=$HOME/bin/parsync:$HOME/bin/bear/bin:$PATH
-PATH=$HOME/bin:$HOME/bin/beets:$HOME/bin/cquery/bin:$HOME/bin/llvm/bin:$HOME/bin/cmake/bin:$PATH
+PATH=$HOME/bin:$HOME/bin/beets:$HOME/bin/cquery/bin:$HOME/bin/llvm/bin:$PATH
 LD_LIBRARY_PATH=$HOME/bin/llvm/lib:$HOME/bin/boost_1_55_gcc/lib/:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
 #######
@@ -202,6 +197,8 @@ alias powertop='sudo powertop'
 alias dmesg='sudo dmesg'
 
 alias -s pdf=xdg-open
+alias -s png=xdg-open
+alias -s jpg=xdg-open
 #######
 
 ###### starship prompt

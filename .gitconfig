@@ -33,7 +33,7 @@
 
 [delta]
 #	syntax-theme = "Nord"
-#	side-by-side = true
+	side-by-side = true
 	line-numbers = true
 #	line-numbers-left-format = ""
 #	line-numbers-right-format = "│ "
