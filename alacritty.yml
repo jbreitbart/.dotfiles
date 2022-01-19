@@ -18,8 +18,8 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   #dimensions:
-  #  columns: 0
-  #  lines: 0
+  columns: 120
+  lines: 120
 
   # Window position (changes require restart)
   #
@@ -612,10 +612,10 @@ key_bindings:
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
-  - { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
-  - { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
-  - { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
-  - { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
+  #  - { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
+  #- { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
+  #- { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
+  #- { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
 
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }

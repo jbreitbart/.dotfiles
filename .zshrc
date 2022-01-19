@@ -168,7 +168,7 @@ alias pacesh="docker exec -it pace-devcontainer-rbj2abt /usr/bin/zsh"
 #######
 
 ####### ROS
-source /opt/ros/melodic/setup.zsh
+#source /opt/ros/melodic/setup.zsh
 #######
 
 ####### PATH / LD_LIBRARY_PATH
